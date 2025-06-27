@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="icon" href="src/images/favicon-black-bulls.jpg" type="image/x-icon">
+    <title>AnimeProcrastinator</title>
+</head>
+<body>
+    <main class="container-principal">
+        <audio autoplay>
+            <source src="src/audio/lo-fi-playlist.m4a">
+        </audio>
+        <section class="container-tabela">
+            <h1>AnimeProcrastinator</h1>
+            <table>
+                <thead class="cabecalho-tabela">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Genêro</th>
+                        <th>Episódios</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+
+                <!-- Tabela usada como modelo para a criação -->
+                <tbody id="tabela-animes">
+                    <tr id="tr" class="escondido">
+                        <td id="nomeAnime" class="td"></td>
+                        <td id="nomeGenero" class="td"></td>
+                        <td id="numeroEpisodios" class="td"></td>
+                        <td id="botaoEditar" class="btn-mostrar">
+                            <button class="btn-icon"><img src="src/images/edit.svg" alt=""></button>
+                        </td>
+                        <td id="botaoExcluir" class="btn-mostrar">
+                            <button class="btn-icon"><img src="src/images/delete.svg" alt=""></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn-form" id="btn-add">Adicionar</button> 
+            <div id="container-formulario" class="escondido">
+                <form action="" class="formulario" >
+                    <label for="anime">Nome do anime</label>
+                    <input type="text" id="anime" placeholder="Ex: Naruto" required>
+                    <label for="genero">Gênero</label>
+                    <input type="text" id="genero" placeholder="Ex: Ação" required>
+                    <label for="episodios">Episódios</label>
+                    <input type="number" id="episodios" placeholder="Ex: 24" required>
+                    <button class="btn-form" id="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="src/js/index.js"></script>
+</body>
+</html>
